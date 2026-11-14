@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghorebaire Fix — Book a Repair</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo"><i class="fas fa-tools"></i> Ghorebaire<span>Fix</span></a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#technicians">Technicians</a></li> 
+                <li><a href="book.html" class="nav-cta">Book Now</a></li>
+                <li><a href="dashboard.php" class="nav-dashboard"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="login.html" class="nav-login"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag"><i class="fas fa-tools"></i> Book a Repair</span>
+                <h1>Fix Your <span>Things</span> in 3 Easy Steps</h1>
+                <p>Fill in the details, choose a technician, and confirm your booking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== BOOKING FORM ===== -->
+    <div class="container">
+        <!-- Steps Indicator -->
+        <div class="booking-steps">
+            <div class="step-indicator active" data-step="1"><span class="step-num">1</span> Service</div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="2"><span class="step-num">2</span> Technician</div>
+            <div class="step-line"></div>
+            <div class="step-indicator" data-step="3"><span class="step-num">3</span> Confirm</div>
+        </div>
+
+        <div class="booking-content">
+            <p id="bookingMessage" class="form-message" role="alert"></p>
+            <!-- Step 1 -->
+            <div class="form-step active" id="step1">
+                <h3>Tell us about your issue</h3>
+                <p>Select the category and describe the problem.</p>
+                <div class="form-group">
+                    <label for="category"><i class="fas fa-tag"></i> Service Category</label>
+                    <select id="category" required>
+                        <option value="">Select a category</option>
+                        <option value="appliance">Home Appliance</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="vehicle">Vehicle</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="subcategory"><i class="fas fa-chevron-right"></i> Sub-category (optional)</label>
+                    <input type="text" id="subcategory" placeholder="e.g. Refrigerator, Laptop, Car" />
+                </div>
+                <div class="form-group">
+                    <label for="description"><i class="fas fa-pencil-alt"></i> Issue Description</label>
+                    <textarea id="description" placeholder="Describe the problem in detail..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="location"><i class="fas fa-map-marker-alt"></i> Your Location</label>
+                    <input type="text" id="location" placeholder="e.g. Dhaka, Banani" required />
+                </div>
+                <div class="booking-actions">
+                    <button type="button" class="btn btn-primary" id="step1Next">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="form-step" id="step2">
+                <h3>Choose a Technician</h3>
+                <p>Select from our verified experts near you.</p>
+                <div class="tech-selection-grid" id="techGrid"></div>
+                <div class="booking-actions">
+                    <button type="button" class="btn btn-outline" id="step2Back">← Back</button>
+                    <button type="button" class="btn btn-primary" id="step2Next">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="form-step" id="step3">
+                <h3>Confirm Your Booking</h3>
+                <p>Review your details and confirm.</p>
+                <div id="summary">
+                    <p><strong>Category:</strong> <span id="summaryCategory"></span></p>
+                    <p><strong>Sub-category:</strong> <span id="summarySubcategory"></span></p>
+                    <p><strong>Description:</strong> <span id="summaryDescription"></span></p>
+                    <p><strong>Location:</strong> <span id="summaryLocation"></span></p>
+                    <p><strong>Technician:</strong> <span id="summaryTechnician"></span></p>
+                </div>
+                <div class="form-group">
+                    <label for="bookingDate"><i class="fas fa-calendar-day"></i> Preferred Date</label>
+                    <input type="date" id="bookingDate" required />
+                </div>
+                <div class="form-group">
+                    <label for="bookingTime"><i class="fas fa-clock"></i> Preferred Time</label>
+                    <input type="time" id="bookingTime" required />
+                </div>
+                <div class="booking-actions">
+                    <button type="button" class="btn btn-outline" id="step3Back">← Back</button>
+                    <button type="button" class="btn btn-primary" id="confirmBooking">Confirm Booking</button>
+                </div>
+            </div>
+
+            <!-- Success -->
+            <div id="bookingSuccess" style="display:none; text-align:center; padding:30px 0;">
+                <i class="fas fa-check-circle" style="font-size:4rem; color:var(--accent);"></i>
+                <h3 style="margin-top:12px;">Booking Confirmed!</h3>
+                <p>We've sent a confirmation to your phone. Your technician will be there soon.</p>
+                <a href="index.html" class="btn btn-primary" style="margin-top:20px;">Return Home</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer style="margin-top:60px;">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><i class="fas fa-tools"></i> Ghorebaire<span>Fix</span></a>
+                    <p>On-demand repair and maintenance platform.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#technicians">Technicians</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                         <li><a href="dashboard.php">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +880 17XX-XXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> support@ghorebairefix.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Ghorebaire Fix. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js?v=20261108-2"></script>
+</body>
+</html>
