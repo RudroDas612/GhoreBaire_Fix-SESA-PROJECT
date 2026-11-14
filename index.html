@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghorebaire Fix — Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-tools"></i> Ghorebaire<span>Fix</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#technicians">Technicians</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="book.html" class="nav-cta">Book Now</a></li>
+                <li><a href="dashboard.php" class="nav-dashboard"><i class="fas fa-chart-pie"></i> Dashboard</a></li>
+                <li><a href="login.html" class="nav-login"><i class="fas fa-user"></i> Login</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO (background image added) ===== -->
+    <section class="hero" id="home" style="background-image: linear-gradient(135deg, rgba(10,46,74,0.78) 0%, rgba(10,46,74,0.55) 100%), url('hero-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container">
+            <div class="hero-content" style="color:#fff;">
+                <span class="hero-tag"><i class="fas fa-bolt"></i> On-Demand Repair</span>
+                <h1>Fixing Things, <br /><span class="highlight">Anywhere, Anytime</span></h1>
+                <p style="color:rgba(255,255,255,0.9);">Ghorebaire Fix is Bangladesh's trusted platform connecting you with verified technicians.</p>
+                <div class="hero-buttons">
+                    <a href="book.html" class="btn btn-primary"><i class="fas fa-wrench"></i> Book a Repair</a>
+                    <a href="index.html#services" class="btn btn-outline" style="border-color:#fff;color:#fff;"><i class="fas fa-chevron-right"></i> Explore Services</a>
+                </div>
+                <div class="hero-stats" style="border-top-color: rgba(255,255,255,0.2);">
+                    <div class="stat"><h3 style="color:#fff;">5+</h3><p style="color:rgba(255,255,255,0.85);">Verified Technicians</p></div>
+                    <div class="stat"><h3 style="color:#fff;">4+</h3><p style="color:rgba(255,255,255,0.85);">Repairs Completed</p></div>
+                    <div class="stat"><h3 style="color:#fff;">3.5★</h3><p style="color:rgba(255,255,255,0.85);">Average Rating</p></div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="card-badge">Quick Fix</div>
+                    <h3>Get matched with a pro</h3>
+                    <p>Describe your issue, choose a technician, and get it fixed.</p>
+                    <div class="demo-steps">
+                        <div class="step"><i class="fas fa-edit"></i> Describe issue &amp; location</div>
+                        <div class="step"><i class="fas fa-user-check"></i> Get matched with a pro</div>
+                        <div class="step"><i class="fas fa-clock"></i> Book &amp; track live</div>
+                        <div class="step"><i class="fas fa-star"></i> Repair &amp; rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES (background image added) ===== -->
+    <section id="services" style="background-image: linear-gradient(rgba(248,250,252,0.92), rgba(248,250,252,0.92)), url('services-bg.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag"><i class="fas fa-cogs"></i> What We Fix</span>
+                <h2>Our <span>Service Categories</span></h2>
+                <p>From home appliances to vehicles — we've got you covered.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-home"></i></div>
+                    <h4>Home Appliances</h4>
+                    <p>Refrigerator, AC, washing machine, microwave, water pump &amp; more.</p>
+                    <a href="book.html" class="service-link">Book Now →</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-laptop"></i></div>
+                    <h4>Electronics &amp; Tech</h4>
+                    <p>Laptop, desktop, mobile phone, printer, router &amp; other devices.</p>
+                    <a href="book.html" class="service-link">Book Now →</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon"><i class="fas fa-car"></i></div>
+                    <h4>Vehicles</h4>
+                    <p>Car, motorcycle, bike repair &amp; regular maintenance services.</p>
+                    <a href="book.html" class="service-link">Book Now →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TECHNICIANS ===== -->
+    <section id="technicians" class="bg-light">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag"><i class="fas fa-user-cog"></i> Our Experts</span>
+                <h2>Meet Our <span>Top Technicians</span></h2>
+                <p>Skilled, verified professionals ready to fix your things.</p>
+            </div>
+            <div class="technicians-grid">
+                <div class="technician-card">
+                    <div class="tech-photo"><img src="6.jfif" alt="Md. Kamal Hossain" /></div>
+                    <div class="tech-info">
+                        <h4>Md. Kamal Hossain</h4>
+                        <span class="tech-specialty"><i class="fas fa-tools"></i> Appliance Specialist</span>
+                        <div class="tech-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>4.9 (120 reviews)</span></div>
+                        <div class="tech-meta"><span><i class="fas fa-calendar-alt"></i> 8 yrs experience</span><span><i class="fas fa-map-marker-alt"></i>Basundhara</span></div>
+                        <a href="book.html" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                </div>
+                <div class="technician-card">
+                    <div class="tech-photo"><img src="7.jpg" alt="Taslima Akhter" /></div>
+                    <div class="tech-info">
+                        <h4>Taslima Akhter</h4>
+                        <span class="tech-specialty"><i class="fas fa-microchip"></i> Electronics Expert</span>
+                        <div class="tech-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>4.8 (95 reviews)</span></div>
+                        <div class="tech-meta"><span><i class="fas fa-calendar-alt"></i> 6 yrs experience</span><span><i class="fas fa-map-marker-alt"></i> Banani</span></div>
+                        <a href="book.html" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                </div>
+                <div class="technician-card">
+                    <div class="tech-photo"><img src="3.jpg" alt="Rafiqul Islam" /></div>
+                    <div class="tech-info">
+                        <h4>Rafiqul Islam</h4>
+                        <span class="tech-specialty"><i class="fas fa-car"></i> Vehicle Mechanic</span>
+                        <div class="tech-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>4.7 (88 reviews)</span></div>
+                        <div class="tech-meta"><span><i class="fas fa-calendar-alt"></i> 10 yrs experience</span><span><i class="fas fa-map-marker-alt"></i> Dhaka</span></div>
+                        <a href="book.html" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                </div>
+                <div class="technician-card">
+                    <div class="tech-photo"><img src="2.jfif" alt="Safiqul Alam" /></div>
+                    <div class="tech-info">
+                        <h4>Safiqul Alam</h4>
+                        <span class="tech-specialty"><i class="fas fa-wifi"></i> Smart Home &amp; IT</span>
+                        <div class="tech-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i> <span>4.9 (67 reviews)</span></div>
+                        <div class="tech-meta"><span><i class="fas fa-calendar-alt"></i> 5 yrs experience</span><span><i class="fas fa-map-marker-alt"></i>Hatirjheel</span></div>
+                        <a href="book.html" class="btn btn-primary btn-sm">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag"><i class="fas fa-quote-left"></i> Real Stories</span>
+                <h2>What Our <span>Customers Say</span></h2>
+                <p>Hear from real people who fixed their things with Ghorebaire Fix.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"My refrigerator stopped cooling. I booked a technician through Ghorebaire Fix and within 2 hours, the problem was fixed. Amazing service!"</p>
+                    <div class="customer"><div class="avatar">RK</div><div><h4>Rahim Khan</h4><span>Dhaka</span></div></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"I needed my laptop repaired urgently. The technician arrived on time, diagnosed the issue quickly, and fixed it right away. Highly recommended!"</p>
+                    <div class="customer"><div class="avatar">SN</div><div><h4>Sarah Nahar</h4><span>Banani</span></div></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"As a technician, Ghorebaire Fix has given me a steady stream of customers. The platform is easy to use and the payments are always on time."</p>
+                    <div class="customer"><div class="avatar">MR</div><div><h4>Mizanur Rahman</h4><span>Technician</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo"><i class="fas fa-tools"></i> Ghorebaire<span>Fix</span></a>
+                    <p>On-demand repair and maintenance platform for home appliances, electronics, and vehicles.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#technicians">Technicians</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="book.html">Book Now</a></li>
+                        <li><a href="dashboard.php">Dashboard</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Get in Touch</h4>
+                    <p><i class="fas fa-phone"></i> +880 17XX-XXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> support@ghorebairefix.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 Ghorebaire Fix. All rights reserved.</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
